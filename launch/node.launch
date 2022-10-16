@@ -1,0 +1,5 @@
+<launch>
+  <arg name="robot" default="robot0" />
+  <node name="stdr_driver_node" type="stdr_driver_node" pkg="stdr_driver_node" ns="$(arg robot)" output="screen"/>
+  <node name="rqt_robot_steering" type="rqt_robot_steering" pkg="rqt_robot_steering" />
+</launch>

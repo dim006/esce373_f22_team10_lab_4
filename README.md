@@ -1,0 +1,6 @@
+## Description:
+- lab_4 package intends to run a simulated robot on the stdr_simulator. The robot is subscribed to the topic /robot0/cmd_vel. However, it uses the /des_vel topic to connect to the rqt and run it in the map. The robot is intended to notify the user if it is close to a wall for which it will stop and the navigator should be able to turn to avoid a collision.
+- After opening a terminal, run: "source /opt/ros/noetic/setup.bash -> catkin_make -> source devel/setup.bash -> go to the specific folder for the launch file "lab4.launch" -> roslaunch lab_4.launch". To launch more than one robot, run: "roslaunch node.launch robot:=<robot_name>".
+- the launch file functions to set up the conditions to have a working simulator upon invoking it. Normally, one would have to open the "roslaunch stdr_launchers server_with_map_and_gui.launch &", include the robot with the laserscan in the simulator, and then the node "rosrun "package" "node" &" itself. 
+- to start using the simulator, include a robot into the simulator with the laserscan feature then select the add button, use the rqt simulator to navigate the robot, upon 0.5 meters from a wall, the robot would turn and make sure that its field of view, rays 125-155 or the front of the robot, does not come unto 0.5 meters of a wall to continue running.
+# esce373_f22_team10_lab_4
